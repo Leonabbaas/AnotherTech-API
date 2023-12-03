@@ -17,12 +17,7 @@ app.use(express.urlencoded({extended: false}))
 // }))
 app.use(helmet())
 app.use(xss())
-const corsOrigin ={
-  origin:'http://localhost:3000',
-  credentials:true,            
-  optionSuccessStatus:200
-}
-app.use(cors(corsOrigin))
+app.use(cors())
 app.use(morgan('dev'))
 
 
